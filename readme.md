@@ -53,7 +53,54 @@
 >_$ git push_
 
 **Bajar los cambios de un repositorio remoto:** 
->_$ git pull_
+>_$ git pull_  
+
+**Ver los commits en cada linea y en cual estamos:**  
+>_$ git log --graph --oneline --decorate_
+
+**Situarse en otro commit:**
+>_$ git checkout commitHash_  
+
+**Ver el hash del siguiente commit:**  
+>_$ git log --graph --oneline --decorate --reflog_
+
+**Volver a la main:**
+>_$ git checkout main_
+
+**Visualizar cambios desde git:**  
+>_$ git show_  
+
+**Crear rama:**  
+>_$ git branch nombreRama_
+
+**Visualizar ramas y cambiar:**  
+>_$ git branch_
+
+**Situarte a la rama que recibe el merge y hacer merge (fast-forward):**  
+>_$ git merge nombreRamaAMergear_
+
+**“Fast forward” (FF)** significa avance rápido y nos permite fusionar la rama que acabamos de crear directamente con la rama main sin realizar un commit de confirmación.
+> git merge –ff  
+> git merge --ff = git merge Ya que por
+defecto se utiliza el --ff por defecto
+(default)
+
+**“No Fast Forward” (NFF)** crea una nueva confirmación con varios padres. Lo que proporciona un mejor seguimiento del historial.
+> git merge --no-ff newFeature
+
+**Ejemplo No Fast Forward:**  
+>_$ git checkout -b NoFastForwardExample_
+![Alt text](./Screenshots/nff1.JPG)
+![Alt text](./Screenshots/nff2.JPG)
+![Alt text](./Screenshots/nff3.JPG) 
+  
+
+**Eliminar rama en local:**
+>_$ git branch -d nameBranch_
+
+**Eliminar rama en remoto:**  
+>_$ git push origin --delete nameBranch_
+
 
 ### Configurar local git:
 ***  
@@ -65,18 +112,14 @@
 
 ### Otros comandos:
 ***
->- $ git --version 
->   - mirar versión de git
->- $ pwd
->   - imprime ruta directorio actual
->- $ ls
->   - listar contenido
->- $ cd
->   - cambiar de directorio
->- $ cd ..
->   - retroceder
->- $ mkdir repo02
->   - crear directorio
-
+|COMANDO |EXPLICACIÓN |  
+|:--- |:----:|
+|$ git --version |mirar versión de git |  
+|$ pwd |imprime ruta directorio actual |  
+|$ ls |listar contenido |
+|$ cd |cambiar de directorio |
+|$ cd .. |retroceder |
+|$ mkdir repo02 |crear directorio |
   
-:alien::fire::alien::fire::alien::fire::alien::fire::alien::fire:
+
+\*:alien::fire::alien::fire::alien::fire::alien::fire::alien::fire:\*
